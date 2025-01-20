@@ -1,3 +1,9 @@
+## 0.0.3
+
+* Improved code formatting and documentation
+* Better static analysis score
+* Optimized method implementations
+
 ## 0.0.2
 
 * Added support for multiple timezones per offset

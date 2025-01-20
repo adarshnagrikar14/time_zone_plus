@@ -1,6 +1,6 @@
 # time_zone_plus
 
-A Flutter package to get timezone names from UTC offsets and country codes.
+A Flutter package to get timezone names and country codes from UTC offsets. Supports multiple timezones per offset.
 
 ## Features
 
@@ -14,7 +14,7 @@ A Flutter package to get timezone names from UTC offsets and country codes.
 
 ```yaml
 dependencies:
-  time_zone_plus: ^0.0.2
+  time_zone_plus: ^0.0.3
 ```
 
 ## Usage
