@@ -1,6 +1,6 @@
 name: time_zone_plus
 description: "A Flutter package to get timezone names from UTC offsets for current location of User."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/adarshnagrikar14/time_zone_plus
 
 environment:
