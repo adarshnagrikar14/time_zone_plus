@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:time_zone_plus/time_zone_plus.dart';
+import 'package:time_zone_plus/timezone_plus.dart';
 
 void main() {
   runApp(const MyApp());
