@@ -1,3 +1,6 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Initial release
+* Get timezone name from UTC offset
+* Get current device timezone
+* Get country code from timezone name
