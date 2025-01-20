@@ -7,13 +7,16 @@ A Flutter package to get timezone names from UTC offsets and country codes.
 * Get timezone name from UTC offset
 * Get current device timezone
 * Get country code from timezone name
+* Get all possible timezones for current offset
+* Get timezone at specific index for current offset
+* Get country code from timezone name at specific index
+
 
 ## Getting started
 
-Add this to your `pubspec.yaml`:
 ```yaml
 dependencies:
-  time_zone_plus: ^0.0.1
+  time_zone_plus: ^0.0.2
 ```
 
 ## Usage
