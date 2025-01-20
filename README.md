@@ -4,13 +4,11 @@ A Flutter package to get timezone names from UTC offsets and country codes.
 
 ## Features
 
-* Get timezone name from UTC offset
-* Get current device timezone
+* Get timezone names from UTC offset
+* Get current device timezone(s)
 * Get country code from timezone name
-* Get all possible timezones for current offset
-* Get timezone at specific index for current offset
-* Get country code from timezone name at specific index
-
+* Get timezone at specific index
+* Get country code for specific timezone index
 
 ## Getting started
 
@@ -22,22 +20,27 @@ dependencies:
 ## Usage
 
 ```dart
-// Initialize timezone database
-await TimeZonePlus.initialize();
-
 // Get current timezone
 String? timezone = TimeZonePlus.getCurrentTimeZone();
 print(timezone); // e.g. 'Asia/Kolkata'
 
-// Get timezone from offset (in minutes)
-String? tz = TimeZonePlus.getTimeZoneFromOffset(330); // UTC+5:30
-print(tz); // 'Asia/Kolkata'
+// Get all possible timezones for current offset
+List<String>? timezones = TimeZonePlus.getCurrentTimeZones();
+print(timezones); // e.g. ['Asia/Kolkata', 'Asia/Colombo']
+
+// Get timezone at specific index
+String? secondTz = TimeZonePlus.getCurrentTimeZoneAt(1);
+print(secondTz); // e.g. 'Asia/Colombo'
 
 // Get country code
 String? countryCode = TimeZonePlus.getCountryCode('Asia/Kolkata');
 print(countryCode); // 'IN'
 
-// Get current country code
+// Get country code for current timezone
 String? currentCountry = TimeZonePlus.getCurrentCountryCode();
 print(currentCountry); // e.g. 'IN'
+
+// Get country code for specific timezone index
+String? secondCountry = TimeZonePlus.getCurrentCountryCodeAt(1);
+print(secondCountry); // e.g. 'LK'
 ```

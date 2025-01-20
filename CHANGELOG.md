@@ -1,6 +1,13 @@
+## 0.0.2
+
+* Added support for multiple timezones per offset
+* Added methods to get timezone and country code at specific index
+* Updated documentation and examples
+* Improved timezone data accuracy
+
 ## 0.0.1
 
 * Initial release
-* Get timezone name from UTC offset
+* Get timezone names from UTC offset
 * Get current device timezone
 * Get country code from timezone name
