@@ -20,6 +20,15 @@ class TimeZonePlus {
     return getCurrentTimeZones()?.firstOrNull;
   }
 
+  /// Get nth timezone from current device's timezone list (0-based index)
+  static String? getCurrentTimeZoneAt(int index) {
+    final timezones = getCurrentTimeZones();
+    if (timezones == null || index < 0 || index >= timezones.length) {
+      return null;
+    }
+    return timezones[index];
+  }
+
   /// Get country code from timezone name
   static String? getCountryCode(String timeZoneName) {
     return timezoneToCountry[timeZoneName];
@@ -28,6 +37,13 @@ class TimeZonePlus {
   /// Get country code for current timezone (uses first matching timezone)
   static String? getCurrentCountryCode() {
     final timezone = getCurrentTimeZone();
+    if (timezone == null) return null;
+    return getCountryCode(timezone);
+  }
+
+  /// Get country code for nth timezone
+  static String? getCurrentCountryCodeAt(int index) {
+    final timezone = getCurrentTimeZoneAt(index);
     if (timezone == null) return null;
     return getCountryCode(timezone);
   }
