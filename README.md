@@ -14,7 +14,7 @@ A Flutter package to get timezone names and country codes from UTC offsets. Supp
 
 ```yaml
 dependencies:
-  time_zone_plus: ^0.0.3
+  time_zone_plus: ^0.0.4
 ```
 
 ## Usage

@@ -1,3 +1,9 @@
+## 0.0.4
+
+* Updated SDK constraints for better compatibility
+* Improved documentation
+* Code optimization
+
 ## 0.0.3
 
 * Improved code formatting and documentation
