@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:time_zone_plus/time_zone_plus.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await TimeZonePlus.initialize();
+void main() {
   runApp(const MyApp());
 }
 
@@ -12,6 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final now = DateTime.now();
+    final offset = now.timeZoneOffset.inMinutes;
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('TimeZonePlus Example')),
@@ -19,8 +20,14 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Current Timezone: ${TimeZonePlus.getCurrentTimeZone()}'),
-              Text('Current Country: ${TimeZonePlus.getCurrentCountryCode()}'),
+              Text(
+                  'Current UTC Offset: ${offset >= 0 ? '+' : ''}${offset ~/ 60}:${offset % 60}'),
+              const SizedBox(height: 20),
+              Text('Possible Timezones: ${TimeZonePlus.getCurrentTimeZones()}'),
+              const SizedBox(height: 20),
+              Text('Selected Timezone: ${TimeZonePlus.getCurrentTimeZone()}'),
+              const SizedBox(height: 20),
+              Text('Country Code: ${TimeZonePlus.getCurrentCountryCode()}'),
             ],
           ),
         ),
